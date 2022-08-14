@@ -1,0 +1,96 @@
+<div>
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-12">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center"><i
+                            class="fa-regular fa-pen-to-square me-2"></i>Cập nhật tài khoản</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label">User name</label>
+                                    <input type="text" id="firstName" class="form-control form-control-lg" ng-model="username"/>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <label class="form-label">Họ và tên</label>
+                                    <input type="text" id="lastName" class="form-control form-control-lg" ng-model="fullname"/>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                                <div class="form-outline datepicker w-100">
+                                    <label for="birthdayDate" class="form-label">Ngày sinh</label>
+                                    <input type="text" class="form-control form-control-lg" id="birthdayDate" ng-model="birthday"/>
+                                   
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <h6 class="mb-2 pb-1">Giới tính: </h6>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="femaleGender" value="true" ng-model="gender"/>
+                                    <label class="form-check-label" for="femaleGender">Nam</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="maleGender" value="false" ng-model="gender"/>
+                                    <label class="form-check-label" for="maleGender">Nữ</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="emailAddress">Email</label>
+                                    <input type="email" id="emailAddress" class="form-control form-control-lg" ng-model="email"/>
+                                    
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                    <label class="form-label" for="phoneNumber" >Xác nhận mật khẩu</label>
+                                    <input type="password" id="phoneNumber" class="form-control form-control-lg" ng-model="password"/>
+                                   
+                                </div>
+                                <!-- <input type="hidden" ng-model="AccountUpdate.schoolfee" value="2500000"/>
+                                <input type="hidden" ng-model="AccountUpdate.marks" value="0"/>
+                                <input type="hidden" ng-model="AccountUpdate.gender" value="false"/> -->
+
+
+                            </div>
+
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <button type="button" class="col-4 btn btn-primary btn-"
+                                data-mdb-ripple-color="dark" ng-click="updateAccount()">Lưu</button>
+                        </div>
+                        <div class="col text-end">
+                            <a href="#!">Đăng nhập</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

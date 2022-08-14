@@ -1,0 +1,111 @@
+<div class="row" ng-controller="indexController">
+    <!-- Blog entries-->
+    <div class="col-lg-8 bg-white p-3">
+        <!-- Featured blog post-->
+        <div class="card mb-4">
+            <!-- <a href="#!"><img class="card-img-top" src="images/bannerIMG.jpg"
+                    alt="..." /></a> -->
+
+            <section class="p-4" style="background-color: #d6edf6;">
+                <div class="container ">
+                    <div class="row gx-4 gx-lg-4 align-items-center">
+                        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="images/bannerCode.jpg"
+                                alt="..." /></div>
+                        <div class="col-md-6">
+
+                            <h1 class="display-5 fw-bolder">Trắc nghiệm IT</h1>
+
+                            <p class="lead">Hệ thống các bài trắc nghiệm online về tin học văn phòng, tin học
+                                cơ bản, lập trình cơ bản, lập trình backend, lập trình frontend, quản trị hệ thống ...
+                            </p>
+                            <div class="d-flex">
+                                <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                    Thông tin chi tiết
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr class="stars">
+        <!-- Nested row for non-featured blog posts-->
+        <div class=" p-1 m-auto">
+            <div class="row d-flex justify-content-around" id="content">
+                <!-- Blog post-->
+                <div class="card col-lg-5 mb-3 " ng-repeat="sb in listSubject | limitTo:pageSize:start">
+                    <a href="#!"><img class="card-img-top rounded mx-auto d-block p-3 IMG"
+                            src="images/logos/{{sb.Logo}}" alt="..." /></a>
+                    <div class="card-body text-center">
+                        <div class="small text-muted">ID môn học: {{sb.Id}}</div>
+                        <h4 class="card-title h5 " style="height: 50px;">{{sb.Name}}</h4>
+                        <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Reiciendis aliquid atque, nulla.</p> -->
+                        <a class="btn btn-outline-primary" href="#!Exam/{{sb.Id}}/{{sb.Name}}">Làm bài</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination-->
+        <nav aria-label="Pagination">
+            <hr class="my-0" />
+            <ul class="pagination justify-content-center my-4">
+                <li class="page-item"><a class="page-link" href="#!" ng-click="first()"><i
+                            class="fa-solid fa-backward-fast"></i></i></a></li>
+                <li class="page-item"><a class="page-link" href="#!" ng-click="prev()"><i
+                            class="fa-solid fa-angles-left"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#!" ng-click="next()"><i
+                            class="fa-solid fa-angles-right"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#!" ng-click="last()"><i
+                            class="fa-solid fa-forward-fast"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Side widgets-->
+    <div class="col-lg-4">
+        <!-- Search widget-->
+        <div class="card mb-4">
+            <div class="card-header lead" style="background-color: #d6edf6;"><i class="fa-solid fa-magnifying-glass me-2"></i>Tìm kiếm</div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Nhập từ khóa..."
+                        aria-label="Enter search term..." aria-describedby="button-search" ng-model="find"/>
+                    <button class="btn btn-primary" id="button-search" type="button">Tìm!</button>
+                </div>
+            </div>
+        </div>
+        <!-- Categories widget-->
+        <div class="card mb-4">
+            <div class="card">
+
+                <div class="">
+                    <div class="accordion-header" id="headingOne">
+                        <button class="accordion-button" style="background-color: #d6edf6;" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                             <i class="fa-solid fa-list me-2"></i></i>Danh mục các môn học
+                        </button>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show "  aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body p-0">
+                            <ul class="list-group list-group-flush" ng-repeat="sb in listSubject | filter:find">
+                                <li class="list-group-item">{{sb.Name }}</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Side widget-->
+        <div class="card mb-4">
+            <div class="card-header lead" style="background-color: #d6edf6;"><i class="fa-solid fa-bell me-2"></i>Mẹo học tập</div>
+            <div class="card-body">Nếu như trước đây bạn cần nắm thật chắc kiến thức và học cách trình bày theo
+                các bước cho đúng trình tự thì bây giờ yêu cầu thêm nữa đó là phải học kiến thức rộng hơn. Tùy
+                mỗi môn sẽ có những đặc thù khác nhau, nhưng trên cơ sở phải nắm kiến thức và biết vận dụng.
+            </div>
+        </div>
+    </div>
+</div>

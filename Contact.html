@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Liên hệ</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+        integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+
+<body class="bg-white" ng-app="contactApp" ng-controller="contactCtrl">
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CODE-LEARNING</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link me-2" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="Contact.html">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="Account.html"><i
+                                class="bi bi-person-circle me-1"></i>Tài khoản</a></li>
+                    <li class="nav-item"><a class="nav-link me-5">Xin chào: {{userName}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page header with logo and tagline-->
+
+    <!-- Page content-->
+    <div class="">
+        <div class="row">
+            <!-- Blog entries-->
+            <div class="col-lg-12 mb-5">
+                <!-- About Section-->
+                <section class="page-section text-white mb-0 p-5 lead" style="background-color: #1abc9c;" id="about">
+                    <div class="container">
+                        <!-- About Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase text-white m-4">Về chúng tôi</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom divider-light">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon text-center mb-5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- About Section Content-->
+                        <div class="row">
+                            <div class="col-lg-4 ms-auto">
+                                <p class="lead">
+                                <h3>Giới thiệu</h3>
+                                Chào mừng bạn đến với Mạng xã hội học tập cho dân IT Code-learning, ở đây bạn sẽ được
+                                tiếp cận
+                                kho TÀI LIỆU khổng lồ và ngày càng đa dạng, cung cấp kiến thức cơ bản và chuyên sâu hoàn
+                                toàn MIỄN PHÍ trên nhiều lĩnh vực: Học Tập, Giải bài tập sách giáo khoa, giải bài tập
+                                sách bài tập, bài tập trắc nghiệm trực tuyến,...
+                                </p>
+                            </div>
+                            <div class="col-lg-4 me-auto">
+                                <p class="lead">
+                                <h3>Sứ mệnh</h3>
+                                Code-learning được ra đời năm 2020 với mong muốn trở thành một trang mạng xã hội
+                                học tập uy tín đến người dùng, giúp người dùng tiếp cận được nhiều tài liệu, văn bản
+                                hay và chuyên sâu với chất lượng tốt nhất mà không tốn chi phí, không mất phí dịch
+                                vụ nào cả.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- About Section Button-->
+
+                    </div>
+                </section>
+                <!-- Contact Section-->
+                <section class="page-section m-5" id="contact">
+                    <div class="container">
+                        <!-- Contact Section Heading-->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary m-4">Liên hệ với chúng
+                            tôi</h2>
+                        <!-- Icon Divider-->
+                        <div class="divider-custom">
+                            <div class="divider-custom-line"></div>
+                            <div class="divider-custom-icon text-center mb-5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="divider-custom-line"></div>
+                        </div>
+                        <!-- Contact Section Form-->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-xl-7">
+                                <form id="contactForm">
+                                    <!-- Name input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="name" type="text"
+                                            placeholder="Enter your name..." data-sb-validations="required" />
+                                        <label for="name">Họ và tên</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is
+                                            required.</div>
+                                    </div>
+                                    <!-- Email address input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="email" type="email"
+                                            placeholder="name@example.com" data-sb-validations="required,email" />
+                                        <label for="email">Địa chỉ Email</label>
+                                    </div>
+                                    <!-- Phone number input-->
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
+                                            data-sb-validations="required" />
+                                        <label for="phone">Số điện thoại</label>
+
+                                    </div>
+                                    <!-- Message input-->
+                                    <div class="form-floating mb-3">
+                                        <textarea class="form-control" id="message" type="text"
+                                            placeholder="Enter your message here..." style="height: 10rem"
+                                            data-sb-validations="required"></textarea>
+                                        <label for="message">Nội dung</label>
+                                    </div>
+
+                                    <div class="d-none" id="submitErrorMessage">
+                                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                                    </div>
+                                    <!-- Submit Button-->
+                                    <button class="btn btn-primary" id="submitButton" type="submit">Gửi</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>CODE-LEARNING
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Bài thi tiêu biểu
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Liên hệ
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> Công viên phần mềm Quang Trung</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            huynhvanvong2002@gmail.com.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-black" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="">mywebsite.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+</body>
+<script>
+    var app = angular.module('contactApp',[]);
+    //controller
+    app.controller('contactCtrl', function ($scope) {
+        var studentModel = JSON.parse(sessionStorage.getItem("student"));
+        if (studentModel != null) {
+            $scope.userName = studentModel.username;
+        } else {
+            $scope.userName = "Vui lòng đăng nhập"
+        }
+    })
+</script>
+
+</html>
